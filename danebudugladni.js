@@ -1,5 +1,5 @@
 /* Napravljeno za kampanju Kolačićima protiv gladi
- * Author: Tomislav Lukinić
+ * Autor: Tomislav Lukinić
  * 06.03.2015.
  */
 
@@ -58,7 +58,7 @@ var COOKIELIB = COOKIELIB || (function(){
                 name = _args[0];
                 divID = "#" + _args[1];
                 $("<center><a href='https://www.indiegogo.com/projects/no-child-left-hungry-no-person-left-powerless' target='_blank'><img src='http://anony.ws/i/2015/03/07/cookiebanner-hr.png'>" +
-                "<div>klikni ovdje da im pomogneš #danebudugladni</div></a></center>").prependTo($(divID));
+                "<div>Kliknite ovdje i možete im pomoći #danebudugladni</div></a></center>").prependTo($(divID));
 
                 if(cookieExists(name) && !(cookieExists("danebudugladni"))) {
                     eraseIt(name);
