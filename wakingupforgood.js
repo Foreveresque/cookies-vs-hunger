@@ -60,10 +60,12 @@ var COOKIELIB = COOKIELIB || (function(){
                 $("<center><a href='https://www.indiegogo.com/projects/no-child-left-hungry-no-person-left-powerless' target='_blank'><img src='http://anony.ws/i/2015/03/07/cookiebanner-eng3.png'>" +
                 "<div>You have a chance of helping them by clicking here #wakingupforgood</div></a></center>").prependTo($(divID));
 
-                if(cookieExists(name) && !(cookieExists("wakingupforgood"))) {
-                    eraseIt(name);
+                if(!(cookieExists("wakingupforgood"))) {
                     createCookie("wakingupforgood", "1", 10);
-                    window.location.reload();
+                    if (cookieExists(name)) {
+                        eraseIt(name);
+                        window.location.reload();
+                    }
                 }
             }
         };
