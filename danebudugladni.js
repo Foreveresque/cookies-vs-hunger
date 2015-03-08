@@ -71,7 +71,7 @@ var COOKIELIB = COOKIELIB || (function(){
         };
     }());
 
-$(function() {
+$( document ).ready(function() {
     cookiename = document.getElementById('cookie-name').value;
     divID = document.getElementById('div-id').value;
     COOKIELIB.init([cookiename, divID]);
