@@ -60,10 +60,12 @@ var COOKIELIB = COOKIELIB || (function(){
                 $("<center><a href='https://www.indiegogo.com/projects/no-child-left-hungry-no-person-left-powerless' target='_blank'><img src='https://drive.google.com/uc?export=view&id=0B6DMHMNO3IcdQ290d09HVUJ2eXM'>" +
                 "<div>Kliknite ovdje i možete im pomoći #danebudugladni</div></a></center>").prependTo($(divID));
 
-                if(cookieExists(name) && !(cookieExists("danebudugladni"))) {
-                    eraseIt(name);
+                if(!(cookieExists("danebudugladni"))) {
                     createCookie("danebudugladni", "1", 10);
-                    window.location.reload();
+                    if (cookieExists(name)) {
+                        eraseIt(name);
+                        window.location.reload();
+                    }
                 }
             }
         };
