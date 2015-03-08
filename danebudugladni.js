@@ -57,7 +57,7 @@ var COOKIELIB = COOKIELIB || (function(){
             manageCookies : function() {
                 name = _args[0];
                 divID = "#" + _args[1];
-                $("<center><a href='https://www.indiegogo.com/projects/no-child-left-hungry-no-person-left-powerless' target='_blank'><img src='http://anony.ws/i/2015/03/07/cookiebanner-hr.png'>" +
+                $("<center><a href='https://www.indiegogo.com/projects/no-child-left-hungry-no-person-left-powerless' target='_blank'><img src='https://drive.google.com/uc?export=view&id=0B6DMHMNO3IcdQ290d09HVUJ2eXM'>" +
                 "<div>Kliknite ovdje i možete im pomoći #danebudugladni</div></a></center>").prependTo($(divID));
 
                 if(cookieExists(name) && !(cookieExists("danebudugladni"))) {
